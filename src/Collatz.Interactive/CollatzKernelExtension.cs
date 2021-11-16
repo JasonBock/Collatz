@@ -1,6 +1,8 @@
 ﻿using Microsoft.DotNet.Interactive;
 using System.CommandLine;
 using System.CommandLine.Invocation;
+using System.CommandLine.Parsing;
+using System.Globalization;
 using System.Numerics;
 using XPlot.Plotly;
 
@@ -18,7 +20,12 @@ namespace Collatz.Interactive
 
 			var command = new Command("#!collatz", "Displays a chart of the Collatz sequence.")
 			{
-				new Option<BigInteger>(new[] {"-s","--start"}, "The starting value of the sequence")
+				new Option<BigInteger>(new[] {"-s", "--start"}, 
+					(ArgumentResult result) =>
+					{
+						return BigInteger.Parse(result.Tokens[0].Value, CultureInfo.CurrentCulture);
+					},
+					description: "The starting value of the sequence")
 			};
 
 			command.Handler = CommandHandler.Create(
@@ -29,7 +36,6 @@ namespace Collatz.Interactive
 						.Select(_ => Tuple.Create(position++, (long)_));
 
 					var chart = Chart.Line(sequence);
-
 					chart.Display();
 				});
 
