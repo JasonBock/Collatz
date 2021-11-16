@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<AssemblyName>Collatz.Interactive</AssemblyName>
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+		<Description>A library that extends the Collatz package for .NET Interactive Notebooks</Description>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeSymbols>true</IncludeSymbols>
+		<NoWarn>NU5104</NoWarn>
+		<PackageId>Collatz.Interactive</PackageId>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/jasonbock/collatz</PackageProjectUrl>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageVersion>$(Version)</PackageVersion>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<RepositoryUrl>https://github.com/jasonbock/collatz</RepositoryUrl>
+		<RootNamespace>Collatz.Interactive</RootNamespace>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+	<PropertyGroup>
+		<RestoreAdditionalProjectSources>https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json ;$(RestoreAdditionalProjectSources)</RestoreAdditionalProjectSources>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Collatz" Version="0.1.0" />
+		<PackageReference Include="Microsoft.DotNet.Interactive.CSharp" Version="1.0.0-beta.21559.2" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+		<PackageReference Include="XPlot.Plotly.Interactive" Version="4.0.6" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+	</ItemGroup>
+</Project>

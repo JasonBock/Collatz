@@ -1,7 +1,5 @@
 ﻿using System.Collections.Immutable;
 using System.Numerics;
-using System;
-using System.Collections.Generic;
 
 namespace Collatz
 {
