@@ -1,9 +1,11 @@
 ﻿using Microsoft.DotNet.Interactive;
+using Microsoft.DotNet.Interactive.Commands;
 using Microsoft.DotNet.Interactive.CSharp;
 using Microsoft.DotNet.Interactive.Events;
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Immutable;
+using XPlot.Plotly;
 
 namespace Collatz.Interactive.Tests;
 
@@ -30,8 +32,10 @@ public static class CollatzKernelExtensionTests
 		Assert.Multiple(() =>
 		{
 			Assert.That(events.Count, Is.EqualTo(2));
-			Assert.That(events.Any(_ => _.GetType().Name == "CommandSucceeded"), Is.True);
-			Assert.That(events.Any(_ => _.GetType().Name == "DisplayedValueProduced"), Is.True);
+			var displayedValueCommand = (DisplayedValueProduced)events[0];
+			var succeededCommand = (CommandSucceeded)events[1];
+			Assert.That(displayedValueCommand.Value, Is.TypeOf<PlotlyChart>());
+			Assert.That(succeededCommand.Command, Is.TypeOf<SubmitCode>());
 		});
 	}
 
@@ -44,8 +48,10 @@ public static class CollatzKernelExtensionTests
 		Assert.Multiple(() =>
 		{
 			Assert.That(events.Count, Is.EqualTo(2));
-			Assert.That(events.Any(_ => _.GetType().Name == "CommandSucceeded"), Is.True);
-			Assert.That(events.Any(_ => _.GetType().Name == "DisplayedValueProduced"), Is.True);
+			var displayedValueCommand = (DisplayedValueProduced)events[0];
+			var succeededCommand = (CommandSucceeded)events[1];
+			Assert.That(displayedValueCommand.Value, Is.TypeOf<PlotlyChart>());
+			Assert.That(succeededCommand.Command, Is.TypeOf<SubmitCode>());
 		});
 	}
 
@@ -58,9 +64,9 @@ public static class CollatzKernelExtensionTests
 		Assert.Multiple(() =>
 		{
 			Assert.That(events.Count, Is.EqualTo(3));
-			Assert.That(events.Any(_ => _.GetType().Name == "CodeSubmissionReceived"), Is.True);
-			Assert.That(events.Any(_ => _.GetType().Name == "CompleteCodeSubmissionReceived"), Is.True);
-			Assert.That(events.Any(_ => _.GetType().Name == "CommandSucceeded"), Is.True);
+			Assert.That(events[0], Is.TypeOf<CodeSubmissionReceived>());
+			Assert.That(events[1], Is.TypeOf<CompleteCodeSubmissionReceived>());
+			Assert.That(events[2], Is.TypeOf<CommandSucceeded>());
 		});
 	}
 
