@@ -19,9 +19,7 @@ public static class CollatzKernelExtensionTests
 
 	[SetUp]
 	public static async Task SetupAsync() =>
-#pragma warning disable CA2000 // Dispose objects before losing scope
 		CollatzKernelExtensionTests.wrapper = await KernelWrapper.CreateAsync().ConfigureAwait(false);
-#pragma warning restore CA2000 // Dispose objects before losing scope
 
 	[Test]
 	public static async Task SubmitCommandWithSOptionAsync()
@@ -31,7 +29,7 @@ public static class CollatzKernelExtensionTests
 
 		Assert.Multiple(() =>
 		{
-			Assert.That(events.Count, Is.EqualTo(2));
+			Assert.That(events, Has.Count.EqualTo(2));
 			var displayedValueCommand = (DisplayedValueProduced)events[0];
 			var succeededCommand = (CommandSucceeded)events[1];
 			Assert.That(displayedValueCommand.Value, Is.TypeOf<PlotlyChart>());
@@ -47,7 +45,7 @@ public static class CollatzKernelExtensionTests
 
 		Assert.Multiple(() =>
 		{
-			Assert.That(events.Count, Is.EqualTo(2));
+			Assert.That(events, Has.Count.EqualTo(2));
 			var displayedValueCommand = (DisplayedValueProduced)events[0];
 			var succeededCommand = (CommandSucceeded)events[1];
 			Assert.That(displayedValueCommand.Value, Is.TypeOf<PlotlyChart>());
@@ -63,7 +61,7 @@ public static class CollatzKernelExtensionTests
 
 		Assert.Multiple(() =>
 		{
-			Assert.That(events.Count, Is.EqualTo(3));
+			Assert.That(events, Has.Count.EqualTo(3));
 			Assert.That(events[0], Is.TypeOf<CodeSubmissionReceived>());
 			Assert.That(events[1], Is.TypeOf<CompleteCodeSubmissionReceived>());
 			Assert.That(events[2], Is.TypeOf<CommandSucceeded>());

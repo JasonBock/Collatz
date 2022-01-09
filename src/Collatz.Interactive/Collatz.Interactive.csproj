@@ -8,7 +8,7 @@
 		<IncludeBuildOutput>true</IncludeBuildOutput>
 		<IncludeSymbols>true</IncludeSymbols>
 		<IsPackable>true</IsPackable>
-		<NoWarn>NU5104,NU5100</NoWarn>
+		<NoWarn>NU5104,NU5100,NU1608</NoWarn>
 		<OutputType>Library</OutputType>
 		<PackageId>Collatz.Interactive</PackageId>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -24,8 +24,10 @@
 		<RestoreAdditionalProjectSources>https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json ;$(RestoreAdditionalProjectSources)</RestoreAdditionalProjectSources>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Collatz" Version="0.1.0" />
-		<PackageReference Include="Microsoft.DotNet.Interactive.CSharp" Version="1.0.0-beta.21559.2" />
+		<PackageReference Include="Collatz" Version="1.0.0" />
+		<PackageReference Include="Microsoft.DotNet.Interactive.Formatting" Version="1.0.0-beta.21606.1" />
+		<PackageReference Include="Microsoft.DotNet.Interactive.Documents" Version="1.0.0-beta.21606.1" />
+		<PackageReference Include="Microsoft.DotNet.Interactive.CSharp" Version="1.0.0-beta.21606.1" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
 		<PackageReference Include="XPlot.Plotly.Interactive" Version="4.0.6" />
 	</ItemGroup>
