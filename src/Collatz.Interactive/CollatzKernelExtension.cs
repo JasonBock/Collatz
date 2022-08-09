@@ -28,12 +28,12 @@ public sealed class CollatzKernelExtension
 					description: "The starting value of the sequence")
 			};
 
-		command.Handler = CommandHandler.Create(
-			(BigInteger start, KernelInvocationContext invocationContext) =>
+		command.SetHandler(
+			(BigInteger start) =>
 			{
 				var position = 0;
 				var sequence = CollatzSequenceGenerator.Generate(start)
-						 .Select(_ => Tuple.Create(position++, (long)_));
+					.Select(_ => Tuple.Create(position++, (long)_));
 
 				var chart = Chart.Line(sequence);
 				chart.Display();
