@@ -18,14 +18,16 @@ public sealed class CollatzKernelExtension
 			throw new ArgumentNullException(nameof(kernel));
 		}
 
+		var startOption = new Option<BigInteger>(new[] { "-s", "--start" },
+							(ArgumentResult result) =>
+							{
+								return BigInteger.Parse(result.Tokens[0].Value, CultureInfo.CurrentCulture);
+							},
+							description: "The starting value of the sequence");
+
 		var command = new Command("#!collatz", "Displays a chart of the Collatz sequence.")
 			{
-				new Option<BigInteger>(new[] {"-s", "--start"},
-					(ArgumentResult result) =>
-					{
-						return BigInteger.Parse(result.Tokens[0].Value, CultureInfo.CurrentCulture);
-					},
-					description: "The starting value of the sequence")
+				startOption
 			};
 
 		command.SetHandler(
@@ -37,7 +39,7 @@ public sealed class CollatzKernelExtension
 
 				var chart = Chart.Line(sequence);
 				chart.Display();
-			});
+			}, startOption);
 
 		kernel.AddDirective(command);
 		return Task.CompletedTask;
