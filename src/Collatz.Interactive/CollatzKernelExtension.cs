@@ -1,6 +1,5 @@
 ﻿using Microsoft.DotNet.Interactive;
 using System.CommandLine;
-using System.CommandLine.Invocation;
 using System.CommandLine.Parsing;
 using System.Globalization;
 using System.Numerics;
@@ -19,11 +18,11 @@ public sealed class CollatzKernelExtension
 		}
 
 		var startOption = new Option<BigInteger>(new[] { "-s", "--start" },
-							(ArgumentResult result) =>
-							{
-								return BigInteger.Parse(result.Tokens[0].Value, CultureInfo.CurrentCulture);
-							},
-							description: "The starting value of the sequence");
+			(ArgumentResult result) =>
+			{
+				return BigInteger.Parse(result.Tokens[0].Value, CultureInfo.CurrentCulture);
+			},
+			description: "The starting value of the sequence");
 
 		var command = new Command("#!collatz", "Displays a chart of the Collatz sequence.")
 			{

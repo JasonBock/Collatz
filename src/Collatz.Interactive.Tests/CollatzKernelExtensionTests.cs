@@ -61,10 +61,9 @@ public static class CollatzKernelExtensionTests
 
 		Assert.Multiple(() =>
 		{
-			Assert.That(events, Has.Count.EqualTo(3));
-			Assert.That(events[0], Is.TypeOf<CodeSubmissionReceived>());
-			Assert.That(events[1], Is.TypeOf<CompleteCodeSubmissionReceived>());
-			Assert.That(events[2], Is.TypeOf<CommandSucceeded>());
+			Assert.That(events, Has.Count.EqualTo(2));
+			Assert.That(events.Any(_ => _.GetType() == typeof(DiagnosticsProduced)));
+			Assert.That(events.Any(_ => _.GetType() == typeof(CommandFailed)));
 		});
 	}
 
