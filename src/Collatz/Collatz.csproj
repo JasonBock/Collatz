@@ -6,6 +6,7 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<IncludeSymbols>true</IncludeSymbols>
+		<PackageIcon>icon.png</PackageIcon>
 		<PackageId>Collatz</PackageId>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageProjectUrl>https://github.com/jasonbock/collatz</PackageProjectUrl>
@@ -14,7 +15,7 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<RepositoryUrl>https://github.com/jasonbock/collatz</RepositoryUrl>
 		<RootNamespace>Collatz</RootNamespace>
-		<Version>1.0.0</Version>
+		<Version>2.0.0</Version>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
 	<ItemGroup>
@@ -22,5 +23,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+		<None Include="..\icon.png" Pack="true" PackagePath="" Visible="false" />
 	</ItemGroup>
 </Project>
