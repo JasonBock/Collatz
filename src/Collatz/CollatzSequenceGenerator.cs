@@ -25,6 +25,32 @@ public static class CollatzSequenceGenerator
 		return builder.ToImmutable();
 	}
 
+#if NET7_0_OR_GREATER
+	public static ImmutableArray<T> Generate<T>(T start)
+		where T : IBinaryInteger<T>
+	{
+		if (start <= T.One)
+		{
+			throw new ArgumentException("Must provide a starting value greater than one.", nameof(start));
+		}
+
+		var two = T.CreateChecked(2);
+		var three = T.CreateChecked(3);
+
+		var builder = ImmutableArray.CreateBuilder<T>();
+		builder.Add(start);
+
+		while (start > T.One)
+		{
+			start = start % two == T.Zero ?
+				start / two : ((three * start) + T.One) / two;
+			builder.Add(start);
+		}
+
+		return builder.ToImmutable();
+	}
+#endif
+
 	public static IEnumerable<BigInteger> GenerateStream(BigInteger start)
 	{
 		if (start <= BigInteger.One)
@@ -41,4 +67,27 @@ public static class CollatzSequenceGenerator
 			yield return start;
 		}
 	}
+
+#if NET7_0_OR_GREATER
+	public static IEnumerable<T> GenerateStream<T>(T start)
+		where T : IBinaryInteger<T>
+	{
+		if (start <= T.One)
+		{
+			throw new ArgumentException("Must provide a starting value greater than one.", nameof(start));
+		}
+
+		yield return start;
+
+		var two = T.CreateChecked(2);
+		var three = T.CreateChecked(3);
+
+		while (start > T.One)
+		{
+			start = start % two == T.Zero ?
+				start / two : ((three * start) + T.One) / two;
+			yield return start;
+		}
+	}
+#endif
 }

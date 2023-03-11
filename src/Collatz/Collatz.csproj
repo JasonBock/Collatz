@@ -4,6 +4,7 @@
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 		<Description>A library that generates the Collatz Conjecture sequence</Description>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<EnablePackageValidation>true</EnablePackageValidation>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<IncludeSymbols>true</IncludeSymbols>
 		<PackageIcon>icon.png</PackageIcon>
@@ -11,6 +12,7 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageProjectUrl>https://github.com/jasonbock/collatz</PackageProjectUrl>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
 		<PackageVersion>$(Version)</PackageVersion>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<RepositoryUrl>https://github.com/jasonbock/collatz</RepositoryUrl>
