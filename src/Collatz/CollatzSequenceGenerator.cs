@@ -3,8 +3,17 @@ using System.Numerics;
 
 namespace Collatz;
 
+/// <summary>
+/// Contains methods to generate Collatz sequences.
+/// </summary>
 public static class CollatzSequenceGenerator
 {
+	/// <summary>
+	/// Generates an array of <see cref="BigInteger" /> values based on the starting value.
+	/// </summary>
+	/// <param name="start">The starting value.</param>
+	/// <returns>The Collatz sequence based on the starting value.</returns>
+	/// <exception cref="ArgumentException">Thrown if <paramref name="start"/> is less than or equal to 1.</exception>
 	public static ImmutableArray<BigInteger> Generate(BigInteger start)
 	{
 		if (start <= BigInteger.One)
@@ -26,6 +35,13 @@ public static class CollatzSequenceGenerator
 	}
 
 #if NET7_0_OR_GREATER
+	/// <summary>
+	/// Generates an array of <typeparamref name="T"/> values based on the starting value.
+	/// </summary>
+	/// <typeparam name="T">A value that derives from <see cref="IBinaryInteger{T}"/>.</typeparam>
+	/// <param name="start">The starting value.</param>
+	/// <returns>The Collatz sequence based on the starting value.</returns>
+	/// <exception cref="ArgumentException">Thrown if <paramref name="start"/> is less than or equal to 1.</exception>
 	public static ImmutableArray<T> Generate<T>(T start)
 		where T : IBinaryInteger<T>
 	{
@@ -51,6 +67,12 @@ public static class CollatzSequenceGenerator
 	}
 #endif
 
+	/// <summary>
+	/// Generates a stream of <see cref="BigInteger" /> values based on the starting value.
+	/// </summary>
+	/// <param name="start">The starting value.</param>
+	/// <returns>The Collatz sequence as a stream based on the starting value.</returns>
+	/// <exception cref="ArgumentException">Thrown if <paramref name="start"/> is less than or equal to 1.</exception>
 	public static IEnumerable<BigInteger> GenerateStream(BigInteger start)
 	{
 		if (start <= BigInteger.One)
@@ -69,6 +91,13 @@ public static class CollatzSequenceGenerator
 	}
 
 #if NET7_0_OR_GREATER
+	/// <summary>
+	/// Generates a stream of <typeparamref name="T"/> values based on the starting value.
+	/// </summary>
+	/// <typeparam name="T">A value that derives from <see cref="IBinaryInteger{T}"/>.</typeparam>
+	/// <param name="start">The starting value.</param>
+	/// <returns>The Collatz sequence as a stream based on the starting value.</returns>
+	/// <exception cref="ArgumentException">Thrown if <paramref name="start"/> is less than or equal to 1.</exception>
 	public static IEnumerable<T> GenerateStream<T>(T start)
 		where T : IBinaryInteger<T>
 	{
