@@ -56,11 +56,14 @@ public static class CollatzSequenceGenerator
 		var builder = ImmutableArray.CreateBuilder<T>();
 		builder.Add(start);
 
-		while (start > T.One)
+		checked
 		{
-			start = start % two == T.Zero ?
-				start / two : ((three * start) + T.One) / two;
-			builder.Add(start);
+			while (start > T.One)
+			{
+				start = start % two == T.Zero ?
+					start / two : ((three * start) + T.One) / two;
+				builder.Add(start);
+			}
 		}
 
 		return builder.ToImmutable();
@@ -111,11 +114,14 @@ public static class CollatzSequenceGenerator
 		var two = T.CreateChecked(2);
 		var three = T.CreateChecked(3);
 
-		while (start > T.One)
+		checked
 		{
-			start = start % two == T.Zero ?
-				start / two : ((three * start) + T.One) / two;
-			yield return start;
+			while (start > T.One)
+			{
+				start = start % two == T.Zero ?
+					start / two : ((three * start) + T.One) / two;
+				yield return start;
+			}
 		}
 	}
 #endif
