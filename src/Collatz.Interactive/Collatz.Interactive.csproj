@@ -25,13 +25,13 @@
 		<Version>1.0.1</Version>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Collatz" Version="1.0.0" />
-		<PackageReference Include="Microsoft.DotNet.Interactive" Version="1.0.0-beta.22405.1" />
-		<PackageReference Include="Microsoft.DotNet.Interactive.Formatting" Version="1.0.0-beta.22405.1" />
-		<PackageReference Include="Microsoft.DotNet.Interactive.Documents" Version="1.0.0-beta.22405.1" />
-		<PackageReference Include="Microsoft.DotNet.Interactive.CSharp" Version="1.0.0-beta.22405.1" />
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-		<PackageReference Include="XPlot.Plotly.Interactive" Version="4.0.6" />
+		<PackageReference Include="Collatz" />
+		<PackageReference Include="Microsoft.DotNet.Interactive" />
+		<PackageReference Include="Microsoft.DotNet.Interactive.Formatting" />
+		<PackageReference Include="Microsoft.DotNet.Interactive.Documents" />
+		<PackageReference Include="Microsoft.DotNet.Interactive.CSharp" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+		<PackageReference Include="XPlot.Plotly.Interactive" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\..\LICENSE" Pack="true" PackagePath="" />

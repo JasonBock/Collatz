@@ -1,6 +1,6 @@
 # Collatz
 
-This is a library that generates a sequence of integer values, based on the [Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture). I'm primarly creating this package because I use this algorithm to demonstrate a number of development concepts in presentations, so having it as a NuGet package will make it a bit easier to reuse it.
+This is a library that generates a sequence of integer values, based on the [Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture). I'm primarly creating this package because I use this algorithm to demonstrate a number of development concepts in presentations, so having it as a NuGet package will make it easier to reuse it.
 
 ## Getting started
 
@@ -41,7 +41,7 @@ The following sequence will print to the console:
 
 ## Additional documentation
 
-* [Changelog]()
+* [Changelog](https://github.com/JasonBock/Collatz/blob/main/changelog.md)
 * [Collatz conjecture on Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture)
 * [The Ultimate Challenge: The 3x+1 Problem](https://www.maa.org/press/maa-reviews/the-ultimate-challenge-the-3x1-problem)
 
