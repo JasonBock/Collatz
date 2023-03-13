@@ -14,6 +14,7 @@ public static class CollatzSequenceGenerator
 	/// <param name="start">The starting value.</param>
 	/// <returns>The Collatz sequence based on the starting value.</returns>
 	/// <exception cref="ArgumentException">Thrown if <paramref name="start"/> is less than or equal to 1.</exception>
+	[Obsolete("This will be removed once .NET 6 is out of support.", false)]
 	public static ImmutableArray<BigInteger> Generate(BigInteger start)
 	{
 		if (start <= BigInteger.One)
@@ -76,6 +77,7 @@ public static class CollatzSequenceGenerator
 	/// <param name="start">The starting value.</param>
 	/// <returns>The Collatz sequence as a stream based on the starting value.</returns>
 	/// <exception cref="ArgumentException">Thrown if <paramref name="start"/> is less than or equal to 1.</exception>
+	[Obsolete("This will be removed once .NET 6 is out of support.", false)]
 	public static IEnumerable<BigInteger> GenerateStream(BigInteger start)
 	{
 		if (start <= BigInteger.One)

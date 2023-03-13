@@ -14,9 +14,11 @@
 		<PackageProjectUrl>https://github.com/jasonbock/collatz</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageTags>.NET C# Collatz</PackageTags>
 		<PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
 		<PackageVersion>$(Version)</PackageVersion>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/jasonbock/collatz</RepositoryUrl>
 		<RootNamespace>Collatz</RootNamespace>
 		<Version>2.0.0</Version>
