@@ -13,6 +13,7 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageProjectUrl>https://github.com/jasonbock/collatz</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>A changelog is available at https://github.com/JasonBock/Collatz/blob/main/changelog.md</PackageReleaseNotes>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageTags>.NET C# Collatz</PackageTags>
 		<PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
