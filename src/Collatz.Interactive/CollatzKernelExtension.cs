@@ -33,7 +33,7 @@ public sealed class CollatzKernelExtension
 			(BigInteger start) =>
 			{
 				var position = 0;
-				var sequence = CollatzSequenceGenerator.Generate(start)
+				var sequence = CollatzSequenceGenerator.Generate<BigInteger>(start)
 					.Select(_ => Tuple.Create(position++, (long)_));
 
 				var chart = Chart.Line(sequence);

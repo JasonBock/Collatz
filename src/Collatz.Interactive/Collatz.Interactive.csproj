@@ -15,14 +15,13 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageProjectUrl>https://github.com/jasonbock/collatz</PackageProjectUrl>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-		<PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
 		<PackageVersion>$(Version)</PackageVersion>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<RepositoryUrl>https://github.com/jasonbock/collatz</RepositoryUrl>
 		<RootNamespace>Collatz.Interactive</RootNamespace>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<TargetFramework>net6.0</TargetFramework>
-		<Version>1.0.1</Version>
+		<TargetFramework>net7.0</TargetFramework>
+		<Version>1.1.0</Version>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Collatz" />

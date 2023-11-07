@@ -45,6 +45,10 @@ The following sequence will print to the console:
 * [Collatz conjecture on Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture)
 * [The Ultimate Challenge: The 3x+1 Problem](https://www.maa.org/press/maa-reviews/the-ultimate-challenge-the-3x1-problem)
 
+## .NET Polygot Version in VSCode
+
+The .ipynb files have been confirmed to work with Polyglot Notebooks v1.0.4102020. Later versions have compatiability issues with XPloty.
+
 ## Feedback
 
 If you run into any issues, please add them [here](https://github.com/JasonBock/Collatz/issues).
