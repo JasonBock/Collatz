@@ -1,6 +1,6 @@
 <Project>
   <ItemGroup>
-    <PackageVersion Include="Collatz" Version="2.0.0" />
+    <PackageVersion Include="Collatz" Version="3.0.0" />
     <PackageVersion Include="Microsoft.DotNet.Interactive" Version="1.0.0-beta.24208.1" />
     <PackageVersion Include="Microsoft.DotNet.Interactive.Formatting" Version="1.0.0-beta.24208.1" />
     <PackageVersion Include="Microsoft.DotNet.Interactive.Documents" Version="1.0.0-beta.24208.1" />
