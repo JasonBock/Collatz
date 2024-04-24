@@ -2,12 +2,12 @@
 	<PropertyGroup>
 		<AssemblyName>Collatz</AssemblyName>
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+		<DebugType>embedded</DebugType>
 		<Description>A library that generates the Collatz Conjecture sequence</Description>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<EnablePackageValidation>true</EnablePackageValidation>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<IncludeSymbols>true</IncludeSymbols>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageId>Collatz</PackageId>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -16,15 +16,14 @@
 		<PackageReleaseNotes>A changelog is available at https://github.com/JasonBock/Collatz/blob/main/changelog.md</PackageReleaseNotes>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<PackageTags>.NET C# Collatz</PackageTags>
-		<PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
+		<!--<PackageValidationBaselineVersion>2.0.0</PackageValidationBaselineVersion>-->
 		<PackageVersion>$(Version)</PackageVersion>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/jasonbock/collatz</RepositoryUrl>
 		<RootNamespace>Collatz</RootNamespace>
-		<Version>2.0.0</Version>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<Version>3.0.0</Version>
+		<TargetFramework>net8.0</TargetFramework>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />

@@ -8,7 +8,7 @@ Simply reference the `Collatz` NuGet package - that's it.
 
 ### Prerequisites
 
-This package works for both .NET 6 and .NET 7. If you're using .NET 7, the `Generate()` and `GenerateStream()` values use the `IBinaryInteger<T>` interface to allow you to use any type that implements that interface.
+This package targets .NET 8.
 
 ## Usage
 
