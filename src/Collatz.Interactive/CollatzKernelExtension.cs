@@ -12,12 +12,9 @@ public sealed class CollatzKernelExtension
 {
 	public Task OnLoadAsync(Kernel kernel)
 	{
-		if (kernel is null)
-		{
-			throw new ArgumentNullException(nameof(kernel));
-		}
+		ArgumentNullException.ThrowIfNull(kernel);
 
-		var startOption = new Option<BigInteger>(new[] { "-s", "--start" },
+		var startOption = new Option<BigInteger>(["-s", "--start"],
 			(ArgumentResult result) =>
 			{
 				return BigInteger.Parse(result.Tokens[0].Value, CultureInfo.CurrentCulture);

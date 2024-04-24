@@ -1,14 +1,14 @@
 <Project>
   <ItemGroup>
     <PackageVersion Include="Collatz" Version="2.0.0" />
-    <PackageVersion Include="Microsoft.DotNet.Interactive" Version="1.0.0-beta.23552.1" />
-    <PackageVersion Include="Microsoft.DotNet.Interactive.Formatting" Version="1.0.0-beta.23552.1" />
-    <PackageVersion Include="Microsoft.DotNet.Interactive.Documents" Version="1.0.0-beta.23552.1" />
-    <PackageVersion Include="Microsoft.DotNet.Interactive.CSharp" Version="1.0.0-beta.23552.1" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
-    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="1.1.1" />
-    <PackageVersion Include="NUnit" Version="3.14.0" />
-    <PackageVersion Include="NUnit.Analyzers" Version="3.9.0" />
+    <PackageVersion Include="Microsoft.DotNet.Interactive" Version="1.0.0-beta.24208.1" />
+    <PackageVersion Include="Microsoft.DotNet.Interactive.Formatting" Version="1.0.0-beta.24208.1" />
+    <PackageVersion Include="Microsoft.DotNet.Interactive.Documents" Version="1.0.0-beta.24208.1" />
+    <PackageVersion Include="Microsoft.DotNet.Interactive.CSharp" Version="1.0.0-beta.24208.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
+    <PackageVersion Include="NUnit" Version="4.1.0" />
+    <PackageVersion Include="NUnit.Analyzers" Version="4.1.0" />
     <PackageVersion Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageVersion Include="XPlot.Plotly.Interactive" Version="4.0.7" />
   </ItemGroup>

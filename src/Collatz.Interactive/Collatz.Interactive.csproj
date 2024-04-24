@@ -2,12 +2,12 @@
 	<PropertyGroup>
 		<AssemblyName>Collatz.Interactive</AssemblyName>
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+		<DebugType>embedded</DebugType>
 		<Description>A library that extends the Collatz package for .NET Interactive Notebooks</Description>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<EnablePackageValidation>true</EnablePackageValidation>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<IncludeBuildOutput>true</IncludeBuildOutput>
-		<IncludeSymbols>true</IncludeSymbols>
 		<IsPackable>true</IsPackable>
 		<NoWarn>NU5104,NU5100,NU1608</NoWarn>
 		<OutputType>Library</OutputType>
@@ -19,8 +19,6 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<RepositoryUrl>https://github.com/jasonbock/collatz</RepositoryUrl>
 		<RootNamespace>Collatz.Interactive</RootNamespace>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<TargetFramework>net7.0</TargetFramework>
 		<Version>1.1.0</Version>
 	</PropertyGroup>
 	<ItemGroup>
