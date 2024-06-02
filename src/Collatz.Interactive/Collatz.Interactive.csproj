@@ -27,7 +27,6 @@
 		<PackageReference Include="Microsoft.DotNet.Interactive.Formatting" />
 		<PackageReference Include="Microsoft.DotNet.Interactive.Documents" />
 		<PackageReference Include="Microsoft.DotNet.Interactive.CSharp" />
-		<PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
 		<PackageReference Include="XPlot.Plotly.Interactive" />
 	</ItemGroup>
 	<ItemGroup>
