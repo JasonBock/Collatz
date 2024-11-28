@@ -8,7 +8,7 @@ Simply reference the `Collatz` NuGet package - that's it.
 
 ### Prerequisites
 
-This package targets .NET 8.
+This package targets .NET 9.
 
 ## Usage
 
@@ -44,10 +44,6 @@ The following sequence will print to the console:
 * [Changelog](https://github.com/JasonBock/Collatz/blob/main/changelog.md)
 * [Collatz conjecture on Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture)
 * [The Ultimate Challenge: The 3x+1 Problem](https://www.maa.org/press/maa-reviews/the-ultimate-challenge-the-3x1-problem)
-
-## .NET Polygot Version in VSCode
-
-The .ipynb files have been confirmed to work with Polyglot Notebooks v1.0.4102020. Later versions have compatiability issues with XPloty.
 
 ## Feedback
 
