@@ -10,10 +10,12 @@ csharp_style_conditional_delegate_call = true:error
 csharp_style_expression_bodied_accessors = true:error
 csharp_style_expression_bodied_constructors = true:error
 csharp_style_expression_bodied_indexers = true:error
+csharp_style_expression_bodied_local_functions = true:error
 csharp_style_expression_bodied_methods = true:error
 csharp_style_expression_bodied_operators = true:error
 csharp_style_expression_bodied_properties = true:error
 csharp_style_inlined_variable_declaration = true:error
+csharp_style_namespace_declarations = file_scoped:error
 csharp_style_pattern_matching_over_as_with_null_check = true:error
 csharp_style_pattern_matching_over_is_with_cast_check = true:error
 csharp_style_throw_expression = true:error
@@ -43,6 +45,15 @@ dotnet_diagnostic.RS1024.severity = none
 
 # CA1014: Mark assemblies with CLSCompliant
 dotnet_diagnostic.CA1014.severity = none
+
+# CA2007: Consider calling ConfigureAwait
+dotnet_diagnostic.CA2007.severity = none
+
+# IDE0055 - ignoring this because it's just flat-out annoying 
+dotnet_diagnostic.IDE0055.severity = none
+
+# IDE0130 - don't need to match folder structure.
+dotnet_diagnostic.IDE0130.severity = none
 
 # NUnit analyzers
 dotnet_diagnostic.NUnit2029.severity=error

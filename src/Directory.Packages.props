@@ -1,15 +1,10 @@
 <Project>
-  <ItemGroup>
-    <PackageVersion Include="Collatz" Version="3.0.0" />
-    <PackageVersion Include="Microsoft.DotNet.Interactive" Version="1.0.0-beta.24208.1" />
-    <PackageVersion Include="Microsoft.DotNet.Interactive.Formatting" Version="1.0.0-beta.24208.1" />
-    <PackageVersion Include="Microsoft.DotNet.Interactive.Documents" Version="1.0.0-beta.24208.1" />
-    <PackageVersion Include="Microsoft.DotNet.Interactive.CSharp" Version="1.0.0-beta.24208.1" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
-    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
-    <PackageVersion Include="NUnit" Version="4.1.0" />
-    <PackageVersion Include="NUnit.Analyzers" Version="4.1.0" />
-    <PackageVersion Include="NUnit3TestAdapter" Version="4.5.0" />
-    <PackageVersion Include="XPlot.Plotly.Interactive" Version="4.0.7" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageVersion Include="Collatz" Version="3.0.0" />
+		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+		<PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
+		<PackageVersion Include="NUnit" Version="4.2.2" />
+		<PackageVersion Include="NUnit.Analyzers" Version="4.4.0" />
+		<PackageVersion Include="NUnit3TestAdapter" Version="4.6.0" />
+	</ItemGroup>
 </Project>

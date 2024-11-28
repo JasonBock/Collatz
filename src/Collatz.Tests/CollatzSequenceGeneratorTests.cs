@@ -3,7 +3,7 @@ using System.Collections.Immutable;
 
 namespace Collatz.Tests;
 
-public static class CollatzSequenceGeneratorTests
+internal static class CollatzSequenceGeneratorTests
 {
 	[Test]
    public static void GenerateForGeneric() => 

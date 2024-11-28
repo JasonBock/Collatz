@@ -52,12 +52,9 @@ public static class CollatzSequenceGenerator
 	public static IEnumerable<T> GenerateStream<T>(T start)
 		where T : IBinaryInteger<T>
 	{
-		if (start <= T.One)
-		{
-			throw new ArgumentException("Must provide a starting value greater than one.", nameof(start));
-		}
-
-		yield return start;
+		yield return start <= T.One ?
+			throw new ArgumentException("Must provide a starting value greater than one.", nameof(start)) :
+			start;
 
 		var two = T.CreateChecked(2);
 		var three = T.CreateChecked(3);
